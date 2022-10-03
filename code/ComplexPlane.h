@@ -18,11 +18,11 @@ public:
     ComplexPlane(float aspectRatio);
     void zoomIn();
     void zoomOut();
-    void setCenter(Vector2f coord);
+    void setCenter(Vector2f coordinate);
     View getView();
-    void setMouseLocation(Vector2f coord);
+    void setMouseLocation(Vector2f coordinate);
     void loadText(Text& text);
-    size_t countIterations(Vector2f cord);
+    size_t countIterations(Vector2f cordinate);
     void iterationsToRGB(size_t count, Uint8& r, Uint8& g, Uint8& b);
 
 

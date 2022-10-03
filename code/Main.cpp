@@ -15,10 +15,10 @@ int main()
 	float monitorHeight = monitor.height;
 	float aspectratio = monitorHeight / monitorWidth;
 	ComplexPlane complex(aspectratio);
-	RenderWindow window(res, "Mandlebroooooooot", Style::Default);
+	RenderWindow window(res, "MendlebrotSet", Style::Default);
 
 	Font font;
-	font.loadFromFile("./fonts/Game Of Squids.ttf");
+	font.loadFromFile("KOMIKAP_.ttf");
 	Text text("test", font, 15);
 	text.setFillColor(sf::Color::White);
 	text.setOutlineColor(sf::Color::Black);
@@ -64,8 +64,7 @@ int main()
 		{
 			const int NUM_OF_THREADS = 16;
 
-			//multithreading??
-			int step = static_cast<int>(monitorWidth) / NUM_OF_THREADS;
+			//multithreading comes into place to calculate rgb with monitor heightss
 			thread t[NUM_OF_THREADS];
 
 			for (int j = 0; j < monitorWidth; j++)

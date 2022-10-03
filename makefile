@@ -17,4 +17,4 @@ run:
 	./$(TARGET)
 
 clean:
-    m $(TARGET) *.o
+	m $(TARGET) *.o
