@@ -32,9 +32,9 @@ void ComplexPlane::zoomOut() {
 
 }
 
-void ComplexPlane::setCenter(Vector2f coordinate) 
+void ComplexPlane::setCenter(Vector2f coord) 
 {
-    m_view.setCenter(coordinate);
+    m_view.setCenter(coord);
 }
 
 View ComplexPlane::getView()
@@ -42,9 +42,9 @@ View ComplexPlane::getView()
     return m_view;
 }
 
-void ComplexPlane::setMouseLocation(Vector2f coordinate) 
+void ComplexPlane::setMouseLocation(Vector2f coord) 
 {
-    m_mouselocation = coordinate;
+    m_mouselocation = coord;
 }
 
 void ComplexPlane::loadText(Text& text) {
@@ -53,13 +53,13 @@ void ComplexPlane::loadText(Text& text) {
     text.setFillColor(Color::Black);
     text.setPosition(0, 0);
 
-    Vector2f centerCoordinate;
-    centerCoordinate = m_view.getCenter();
+    Vector2f centerCoord;
+    centerCoord = m_view.getCenter();
 
     //Updates locations of mouse with coordinates x and y
     stringstream ss;
     ss << "MandelbrotSet" << endl;
-    ss << "Center: (" << centerCoordinate.x << ", " << centerCoordinate.y << ")" << endl;
+    ss << "Center: (" << centerCoord.x << ", " << centerCoord.y << ")" << endl;
     ss << "Cursor: (" << m_mouselocation.x << ", " << m_mouselocation.y << ")" << endl;
     ss << "Left click = Zoom in" << endl;
     ss << "Right click = Zoom Out" << endl;
@@ -67,9 +67,9 @@ void ComplexPlane::loadText(Text& text) {
 
 }
 
-size_t ComplexPlane::countIterations(Vector2f coordinate) {
+size_t ComplexPlane::countIterations(Vector2f coord) {
 
-	complex<double> c(coordinate.x, coordinate.y);
+	complex<double> c(coord.x, coord.y);
 	complex<double> z(0, 0);
 	size_t iter = 0;
 
