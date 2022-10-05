@@ -64,7 +64,7 @@ int main()
 		{
 			const int NUM_OF_THREADS = 16;
 
-			//multithreading comes into place to calculate rgb with monitor heightss
+			//multithreading comes into place to calculate rgb with monitor heights
 			thread t[NUM_OF_THREADS];
 
 			for (int j = 0; j < monitorWidth; j++)
